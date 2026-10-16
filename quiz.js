@@ -7,15 +7,15 @@
 
 const questions = [
   {
-    title: "サンプル曲A",
-    file: "audio/song01.mp3",
-    startSeconds: 45,
-    durationSeconds: 5,
+    title: "ツンデレCafeへようこそ☆",
+    file: "【太鼓の達人】ツンデレCafeへようこそ☆【音源】",
+    startSeconds: 0,
+    durationSeconds: 2,
     choices: [
-      "サンプル曲A",
-      "サンプル曲B",
-      "サンプル曲C",
-      "サンプル曲D"
+      "ツンデレCafeへようこそ",
+      "アンリミテッドゲームズ",
+      "承認欲Q",
+      "コネクトカラーズ"
     ]
   },
   {
