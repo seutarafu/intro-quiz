@@ -31,8 +31,8 @@ const questions = [
     ]
   },
   {
-    title: "audio/コネクトカラーズ -未来彩る君へ- (feat. はぁち)",
-    file: "audio/コネクトカラーズ -未来彩る君へ- (feat. はぁち).mp3",
+    title: "コネクトカラーズ -未来彩る君へ- (feat. はぁち)",
+    file: "コネクトカラーズ -未来彩る君へ- (feat. はぁち).mp3",
     startSeconds: 60,
     durationSeconds: 7,
     choices: [
