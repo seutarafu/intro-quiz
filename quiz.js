@@ -8,11 +8,11 @@
 const questions = [
   {
     title: "ツンデレCafeへようこそ☆",
-    file: "audio/【太鼓の達人】ツンデレCafeへようこそ☆【音源】.mp3",
+    file: "【太鼓の達人】ツンデレCafeへようこそ☆【音源】.mp3",
     startSeconds: 1,
     durationSeconds: 2,
     choices: [
-      "ツンデレCafeへようこそ",
+      "ツンデレCafeへようこそ☆",
       "アンリミテッドゲームズ",
       "承認欲Q",
       "コネクトカラーズ"
