@@ -32,7 +32,7 @@ const questions = [
   },
   {
     title: "サンプル",
-    file: "コネクトカラーズ -未来彩る君へ- (feat. はぁち).mp3",
+    file: "コネクトカラーズ -未来彩る君へ- (feat. はぁち).mp",
     startSeconds: 60,
     durationSeconds: 7,
     choices: [
