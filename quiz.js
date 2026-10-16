@@ -332,6 +332,7 @@ function nextQuestion() {
   }
 }
 function showResult() {
+  console.log("結果画面を表示します")
   stopAudio();
 
   questionNumber.textContent = "クイズ終了";
