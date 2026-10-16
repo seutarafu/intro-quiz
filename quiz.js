@@ -31,19 +31,19 @@ const questions = [
     ]
   },
   {
-    title: "サンプル",
+    title: "コネクトカラーズ -未来彩る君へ- (feat. はぁち)",
     file: "コネクトカラーズ -未来彩る君へ- (feat. はぁち).mp3",
     startSeconds: 60,
     durationSeconds: 3,
     choices: [
       "サンプル曲A",
       "サンプル曲B",
-      "サンプル",
+      "コネクトカラーズ -未来彩る君へ- (feat. はぁち)",
       "サンプル曲D"
     ]
-  }
-    {
-    title: "ツンデレCafeへようこそ",
+  },
+  {
+    title: "承認欲Q",
     file: "【太鼓の達人】ツンデレCafeへようこそ☆【音源】.mp3",
     startSeconds: 1,
     durationSeconds: 2,
