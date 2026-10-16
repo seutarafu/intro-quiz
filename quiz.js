@@ -8,7 +8,7 @@
 const questions = [
   {
     title: "ツンデレCafeへようこそ☆",
-    file: "【太鼓の達人】ツンデレCafeへようこそ☆【音源】.mp",
+    file: "【太鼓の達人】ツンデレCafeへようこそ☆【音源】.mp3",
     startSeconds: 1,
     durationSeconds: 2,
     choices: [
@@ -42,6 +42,18 @@ const questions = [
       "サンプル曲D"
     ]
   }
+    {
+    title: "ツンデレCafeへようこそ☆",
+    file: "【太鼓の達人】ツンデレCafeへようこそ☆【音源】.mp3",
+    startSeconds: 1,
+    durationSeconds: 2,
+    choices: [
+      "ツンデレCafeへようこそ☆",
+      "アンリミテッドゲームズ",
+      "承認欲Q",
+      "コネクトカラーズ"
+    ]
+  },
 ];
 
 // ===================================
