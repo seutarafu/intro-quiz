@@ -337,8 +337,8 @@ function nextQuestion() {
   }
 }
 function showResult() {
-  console.log("結果画面を表示します")
-  stopAudio();
+  
+　stopAudio();
 
   questionNumber.textContent = "クイズ終了";
   scoreDisplay.textContent =
