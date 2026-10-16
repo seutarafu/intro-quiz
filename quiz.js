@@ -324,14 +324,13 @@ function checkAnswer(choice, selectedButton) {
 // ===================================
 
 function nextQuestion() {
-  if (currentIndex < quizQuestions.length - 1) {
+  if (currentIndex + 1 < quizQuestions.length) {
     currentIndex++;
     showQuestion();
   } else {
     showResult();
   }
 }
-
 function showResult() {
   stopAudio();
 
@@ -364,14 +363,12 @@ function showResult() {
 playButton.addEventListener("click", playIntro);
 
 nextButton.addEventListener("click", () => {
-  if (nextButton.textContent === "もう一度遊ぶ") {
+  if (nextButton.textContent.includes("もう一度遊ぶ")) {
     startQuiz();
-    return;
+  } else {
+    nextQuestion();
   }
-
-  nextQuestion();
 });
-
 function startQuiz() {
   stopAudio();
 
