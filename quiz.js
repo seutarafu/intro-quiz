@@ -8,7 +8,7 @@
 const questions = [
   {
     title: "ツンデレCafeへようこそ☆",
-    file: "【太鼓の達人】ツンデレCafeへようこそ☆【音源】.mp3",
+    file: "audio/【太鼓の達人】ツンデレCafeへようこそ☆【音源】.mp3",
     startSeconds: 1,
     durationSeconds: 2,
     choices: [
@@ -19,13 +19,13 @@ const questions = [
     ]
   },
   {
-    title: "サンプル曲B",
-    file: "audio/song02.mp3",
+    title: "インフェルノシティ",
+    file: "audio/【BOFXVI】インフェルノシティ _ Ponchi♪ feat.はぁち.mp3",
     startSeconds: 30,
     durationSeconds: 5,
     choices: [
       "サンプル曲A",
-      "サンプル曲B",
+      "インフェルノシティ",
       "サンプル曲C",
       "サンプル曲D"
     ]
