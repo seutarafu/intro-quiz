@@ -31,14 +31,14 @@ const questions = [
     ]
   },
   {
-    title: "コネクトカラーズ -未来彩る君へ- (feat. はぁち)",
+    title: "サンプル",
     file: "コネクトカラーズ -未来彩る君へ- (feat. はぁち).mp3",
     startSeconds: 60,
     durationSeconds: 7,
     choices: [
       "サンプル曲A",
       "サンプル曲B",
-      "コネクトカラーズ -未来彩る君へ- (feat. はぁち)",
+      "サンプル",
       "サンプル曲D"
     ]
   }
