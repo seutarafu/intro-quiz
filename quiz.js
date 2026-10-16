@@ -41,8 +41,8 @@ const questions = [
       "サンプル",
       "サンプル曲D"
     ]
-  }
-    {
+  },
+  {
     title: "承認欲Ｑ",
     file: "audio/承認欲Ｑ.mp3",
     startSeconds: 1,
