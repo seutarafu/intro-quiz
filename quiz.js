@@ -324,10 +324,15 @@ function checkAnswer(choice, selectedButton) {
 // ===================================
 
 function nextQuestion() {
-  if (currentIndex + 1 < quizQuestions.length) {
+  message.textContent = "確認：次の問題へ進む処理が動きました";
+  hint.textContent =
+    `現在の問題番号：${currentIndex + 1} / ${quizQuestions.length}`;
+
+  if (currentIndex < quizQuestions.length - 1) {
     currentIndex++;
     showQuestion();
   } else {
+    message.textContent = "確認：結果画面を表示します";
     showResult();
   }
 }
