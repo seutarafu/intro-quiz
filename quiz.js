@@ -8,7 +8,7 @@
 const questions = [
   {
     title: "ツンデレCafeへようこそ☆",
-    file: "【太鼓の達人】ツンデレCafeへようこそ☆【音源】.mp3",
+    file: "【太鼓の達人】ツンデレCafeへようこそ☆【音源】.mp",
     startSeconds: 1,
     durationSeconds: 2,
     choices: [
@@ -32,9 +32,9 @@ const questions = [
   },
   {
     title: "サンプル",
-    file: "コネクトカラーズ -未来彩る君へ- (feat. はぁち).mp",
+    file: "コネクトカラーズ -未来彩る君へ- (feat. はぁち).mp3",
     startSeconds: 60,
-    durationSeconds: 7,
+    durationSeconds: 3,
     choices: [
       "サンプル曲A",
       "サンプル曲B",
