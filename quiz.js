@@ -362,12 +362,14 @@ function showResult() {
 // ===================================
 
 playButton.addEventListener("click", playIntro);
+
 nextButton.addEventListener("click", () => {
-  if (currentIndex === quizQuestions.length - 1 && answered) {
+  if (nextButton.textContent === "もう一度遊ぶ") {
     startQuiz();
-  } else {
-    nextQuestion();
+    return;
   }
+
+  nextQuestion();
 });
 
 function startQuiz() {
