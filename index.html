@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#18233f">
+  <title>イントロクイズ</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="quiz.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <p class="eyebrow">MUSIC QUIZ</p>
+      <h1>イントロクイズ</h1>
+      <p class="subtitle">この曲、わかるかな？</p>
+    </header>
+
+    <section class="panel">
+      <div class="status">
+        <span id="question-number">第 1 問</span>
+        <span id="score">正解数：0</span>
+      </div>
+
+      <div class="music-icon" aria-hidden="true">♫</div>
+      <h2 id="message">準備はいい？</h2>
+      <p id="hint">ボタンを押してイントロを聴こう！</p>
+
+      <audio id="audio" preload="auto"></audio>
+
+      <button id="play-button" class="play-button">
+        ▶ イントロを再生
+      </button>
+
+      <p id="play-info" class="play-info">
+        音声を再生するにはボタンを押してください
+      </p>
+
+      <div id="choices" class="choices"></div>
+
+      <p id="feedback" class="feedback" aria-live="polite"></p>
+
+      <button id="next-button" class="next-button" hidden>
+        次の問題へ →
+      </button>
+    </section>
+
+    <footer>
+      <p>自分で用意した音源で遊ぶ音楽クイズ</p>
+    </footer>
+  </main>
+</body>
+</html>
