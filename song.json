@@ -1,0 +1,27 @@
+
+[
+  {
+    "title": "ツンデレCafeへようこそ☆",
+    "file": "audio/【太鼓の達人】ツンデレCafeへようこそ☆【音源】.mp3",
+    "startSeconds": 1,
+    "durationSeconds": 2
+  },
+  {
+    "title": "インフェルノシティ",
+    "file": "audio/【BOFXVI】インフェルノシティ _ Ponchi♪ feat.はぁち.mp3",
+    "startSeconds": 30,
+    "durationSeconds": 5
+  },
+  {
+    "title": "コネクトカラーズ",
+    "file": "audio/コネクトカラーズ -未来彩る君へ- (feat. はぁち).mp3",
+    "startSeconds": 60,
+    "durationSeconds": 3
+  },
+  {
+    "title": "承認欲Q",
+    "file": "audio/承認欲Ｑ.mp3",
+    "startSeconds": 1,
+    "durationSeconds": 2
+  }
+]
