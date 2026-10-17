@@ -50,7 +50,7 @@ const questions = [
     choices: [
       "ツンデレCafeへようこそ",
       "アンリミテッドゲームズ",
-      "承認欲Q",
+      "承認欲Ｑ",
       "コネクトカラーズ"
     ]
   },
@@ -336,15 +336,12 @@ function checkAnswer(choice, selectedButton) {
 // ===================================
 
 function nextQuestion() {
-  message.textContent = "確認：次の問題へ進む処理が動きました";
-  hint.textContent =
-    `現在の問題番号：${currentIndex + 1} / ${quizQuestions.length}`;
 
   if (currentIndex < quizQuestions.length - 1) {
     currentIndex++;
     showQuestion();
   } else {
-    message.textContent = "確認：結果画面を表示します";
+   
     showResult();
   }
 }
