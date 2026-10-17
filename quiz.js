@@ -42,6 +42,10 @@ function shuffle(array) {
     [result[i], result[j]] = [result[j], result[i]];
   }
 
+  return result;
+}
+
+// 選択肢を自動生成する
 function makeChoices(question) {
   const otherSongs = shuffle(
     questions.filter(song => song.title !== question.title)
@@ -51,9 +55,6 @@ function makeChoices(question) {
     question.title,
     ...otherSongs.map(song => song.title)
   ]);
-}
-  
-  return result;
 }
 
 // ===================================
