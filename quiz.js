@@ -394,11 +394,13 @@ async function loadQuestions() {
 
     startQuiz();
 
- } catch (error) {
+} catch (error) {
   console.error(error);
-  message.textContent = "読み込みエラー：" + error.message;
+
+  message.textContent = "エラー：" + error.message;
   hint.textContent =
-    "songs.json の名前、形式、曲数、ファイル名を確認してください。";
+    "エラーの種類を確認して、修正してください。";
+
   playButton.disabled = true;
 }
 }
