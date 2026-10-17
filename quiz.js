@@ -41,6 +41,7 @@ function shuffle(array) {
     const j = Math.floor(Math.random() * (i + 1));
     [result[i], result[j]] = [result[j], result[i]];
   }
+
 function makeChoices(question) {
   const otherSongs = shuffle(
     questions.filter(song => song.title !== question.title)
@@ -51,6 +52,7 @@ function makeChoices(question) {
     ...otherSongs.map(song => song.title)
   ]);
 }
+  
   return result;
 }
 
