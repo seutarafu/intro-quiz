@@ -26,6 +26,7 @@ const nextButton = document.getElementById("next-button");
 // 3. クイズの状態
 // ===================================
 
+
 let quizQuestions = [];
 let currentIndex = 0;
 let score = 0;
@@ -56,6 +57,7 @@ function makeChoices(question) {
     ...otherSongs.map(song => song.title)
   ]);
 }
+
 
 // ===================================
 // 4. 問題を表示する
