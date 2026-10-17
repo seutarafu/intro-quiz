@@ -311,7 +311,7 @@ function nextQuestion() {
 }
 function showResult() {
   
-　stopAudio();
+  stopAudio();
 
   questionNumber.textContent = "クイズ終了";
   scoreDisplay.textContent =
