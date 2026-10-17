@@ -5,56 +5,7 @@
 // 1. 問題データ
 // ===================================
 
-const questions = [
-  {
-    title: "ツンデレCafeへようこそ☆",
-    file: "【太鼓の達人】ツンデレCafeへようこそ☆【音源】.mp3",
-    startSeconds: 1,
-    durationSeconds: 2,
-    choices: [
-      "ツンデレCafeへようこそ☆",
-      "アンリミテッドゲームズ",
-      "承認欲Q",
-      "コネクトカラーズ"
-    ]
-  },
-  {
-    title: "インフェルノシティ",
-    file: "audio/【BOFXVI】インフェルノシティ _ Ponchi♪ feat.はぁち.mp3",
-    startSeconds: 30,
-    durationSeconds: 5,
-    choices: [
-      "サンプル曲A",
-      "インフェルノシティ",
-      "サンプル曲C",
-      "サンプル曲D"
-    ]
-  },
-  {
-    title: "サンプル",
-    file: "コネクトカラーズ -未来彩る君へ- (feat. はぁち).mp3",
-    startSeconds: 60,
-    durationSeconds: 3,
-    choices: [
-      "サンプル曲A",
-      "サンプル曲B",
-      "サンプル",
-      "サンプル曲D"
-    ]
-  },
-  {
-    title: "承認欲Ｑ",
-    file: "audio/承認欲Ｑ.mp3",
-    startSeconds: 1,
-    durationSeconds: 2,
-    choices: [
-      "ツンデレCafeへようこそ",
-      "アンリミテッドゲームズ",
-      "承認欲Ｑ",
-      "コネクトカラーズ"
-    ]
-  },
-];
+let questions = [];
 
 // ===================================
 // 2. 画面の部品
@@ -90,7 +41,16 @@ function shuffle(array) {
     const j = Math.floor(Math.random() * (i + 1));
     [result[i], result[j]] = [result[j], result[i]];
   }
+function makeChoices(question) {
+  const otherSongs = shuffle(
+    questions.filter(song => song.title !== question.title)
+  ).slice(0, 3);
 
+  return shuffle([
+    question.title,
+    ...otherSongs.map(song => song.title)
+  ]);
+}
   return result;
 }
 
@@ -122,8 +82,7 @@ function showQuestion() {
   choicesBox.replaceChildren();
 
   // 選択肢の順番もランダムにする
-  const shuffledChoices = shuffle(question.choices);
-
+  const shuffledChoices = makeChoices(question);
   shuffledChoices.forEach((choice) => {
     const button = document.createElement("button");
 
@@ -397,9 +356,51 @@ function startQuiz() {
   showQuestion();
 }
 
-if (questions.length === 0) {
-  message.textContent = "問題が登録されていません";
+async function loadQuestions() {
   playButton.disabled = true;
-} else {
-  startQuiz();
+  message.textContent = "曲データを読み込み中…";
+
+  try {
+    const response = await fetch("songs.json");
+
+    if (!response.ok) {
+      throw new Error("songs.json を読み込めません");
+    }
+
+    questions = await response.json();
+
+    if (!Array.isArray(questions) || questions.length < 4) {
+      throw new Error("曲を4曲以上登録してください");
+    }
+
+    for (const song of questions) {
+      if (
+        !song.title ||
+        !song.file ||
+        !Number.isFinite(song.startSeconds) ||
+        !Number.isFinite(song.durationSeconds) ||
+        song.startSeconds < 0 ||
+        song.durationSeconds <= 0
+      ) {
+        throw new Error("曲データの設定を確認してください");
+      }
+    }
+
+    const titles = questions.map(song => song.title);
+
+    if (new Set(titles).size !== titles.length) {
+      throw new Error("曲名が重複しています");
+    }
+
+    startQuiz();
+
+  } catch (error) {
+    console.error(error);
+    message.textContent = "曲データを読み込めませんでした";
+    hint.textContent =
+      "songs.json の形式や曲数、ファイル名を確認してください。";
+    playButton.disabled = true;
+  }
 }
+
+loadQuestions();
